@@ -3,7 +3,7 @@
 
 Component 측면에서 나오는 컴포넌트로 열었다 닫았다 하는 서랍! 이라고 할 수 있다
 
-[확인 자료](https://m3.material.io/components/navigation-drawer/overview)
+[공식 문서](https://m3.material.io/components/navigation-drawer/overview)
 
 ## Specs
 ![alt text](image-2.png)
@@ -41,3 +41,12 @@ Modal처럼 뒤를 막지 않고 앱 content와 공존이 가능
 When?   
 Large / Extra-large 화면 크기       
 화면 공간이 넉넉해 Drawer를 표시 상태로 둬도 문제가 없음
+
+## 사용 방법
+### 동작 제어
+```DrawerState``` : drawer의 close, open을 제어
+
+이 때 open 및 close 함수는 suspend 함수로, CoroutineScope를 지정해야 한다
+
+> rememberCoroutineScope를 활용해 인스턴스화 할 수 있다
+
