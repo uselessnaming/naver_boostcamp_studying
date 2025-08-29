@@ -22,3 +22,32 @@ width 수정자를 사용하면 고정 너비를 설정하되, 높이는 결정�
 ### sizeIn 수정자
 너비와 높이의 정확한 최소 및 최대 제약 조건을 설정할 수 있다    
 제약 조건을 세밀하게 제어해야 하는 경우 사용한다
+
+### matchParentSize()
+Box 크기에 영향을 미치지 않고 상위 Box와 크기가 같아지도록 하는 수정자로, Box 내에서만 사용이 가능합니다.
+
+## Modifier에 중복 선언을 하게 되면 어떻게 될까?
+```kotlin
+modifier = Modifier
+    .width(50.dp)
+    .width(300.dp)
+```
+위 코드를 실행하면, 어떻게 될까?        
+
+첫 width만 동작한다
+크기를 지정하는 방법에 대해서 위에 적혀있지만 여러 제약 조건 중 width나 height를 중복을 작성하면 처음 dp만 적용된다
+
+```kotlin
+modifier = Modifier.background(color = Color.Blue.copy(alpha = 1f))
+    .background(color = Color.Green.copy(alpha = 0.6f))
+    .background(color = Color.White.copy(alpha = 0.1f)),
+```
+위 코드를 실행한다면?
+> alpha는 투명도를 나타낸다
+
+이렇게 하면 background가 차곡차곡 쌓여서 원하는 색상과는 다른 중첩된 색상이 나타나게 된다
+
+### 결론
+Modifier에서 중복을 처리할 때 체이닝이다보니 background와 같이 그리는 부분들이나 clickable과 같은 속성들은 중복되어 쌓이게 된다
+
+다만 크기 제약자의 경우에 어떤 기준으로 정해지는 지는 정확하지 않지만 width, height / fillMaxWidth, fillMaxHeight의 경우에는 가장 처음 선언된 부분에 대해서 적용되는 것이다.
