@@ -117,6 +117,16 @@ addEntryToBackStack()는 NavController의 백스택에 navigate 대상 entry를 
 이 entry는 최종 목적지이기 때문에 중간 목적지가 NavGraph인 경우, node와 람다의 파라미터로 들어온 entry와 destination이 다를 수 있다     
 따라서 최종 목적지의 조상들을 먼저 백스택에 추가하고, 마지막으로 entry를 추가한다
 
+<img width="845" height="463" alt="image" src="https://github.com/user-attachments/assets/3bfbcbea-1e1d-4e3b-91c8-a28209079e34" />
+
+말로만 하니 어렵지만 위 구조를 보면 좀 더 이해가 쉽다    
+A화면에서 B화면으로 이동하고자 한다면?에 대한 설명이다    
+
+각 화면들은 NavDestination에 매칭된다    
+그리고 NavDestination은 화면 전달을 요청하기 위한 NavDirection을 가지고 있다    
+
+A화면에서 B화면 이동을 위해 NavDirection을 NavController에게 요청하면 내부적으로 stack을 처리하고, 다음 NavDirections를 실행할 때 arguments가 있다면 전달한다
+
 ### Navigator 구조
 Navigator는 state라는 이름으로 backStack을 관리하며, NaviatorState는 backStack이라는 프로퍼티이다
 
