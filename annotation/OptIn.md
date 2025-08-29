@@ -29,3 +29,6 @@ OptIn(ExperimentalMaterial3Api::class) 어노테이션은 사용자가 붙이는
 
 > ExperimentalMaterial3Api는 위험한 거니까 쓸 사람들은 알아둬!
 > OptIn은 위험한 거 알고 있으니까 그만 알려줘!
+
+**실수에 대한 공유**        
+`@ExperimentalMaterial3Api`을 사용하면 그 함수를 호출하는 위쪽 함수에서도 모두 붙여야 했는데, 이는 해당 어노테이션을 사용함으로써 불안정한 API임을 말해주는데, 그것을 상위로 계속 올려서 사용하는 모든 범위에 어노테이션을 달아야 한다
