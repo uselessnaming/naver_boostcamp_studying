@@ -51,3 +51,5 @@ modifier = Modifier.background(color = Color.Blue.copy(alpha = 1f))
 Modifier에서 중복을 처리할 때 체이닝이다보니 background와 같이 그리는 부분들이나 clickable과 같은 속성들은 중복되어 쌓이게 된다
 
 다만 크기 제약자의 경우에 어떤 기준으로 정해지는 지는 정확하지 않지만 width, height / fillMaxWidth, fillMaxHeight의 경우에는 가장 처음 선언된 부분에 대해서 적용되는 것이다.
+
+> 이유를 알아보면 좋을 것 같은데 자료를 마땅히 찾지 못헀다..
