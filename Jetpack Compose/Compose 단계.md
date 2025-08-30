@@ -2,7 +2,8 @@
 
 Compose에는 크게 3개의 단계로 나눠집니다.
 
-![alt text](image.png)
+<img width="1348" height="148" alt="image" src="https://github.com/user-attachments/assets/1e6bfa71-6b5b-4d97-8891-d8e8436bd62a" />
+
 ### Composition
 표시할 UI로 Compose는 구성 가능한 함수를 실행하고 UI 설명을 만든다      
 
@@ -22,7 +23,8 @@ Composition 단계에서 생성된 UI 트리를 사용하며, 각 Layout 노드�
 
 > 이 단계 종료 시 각 레이아웃 노드는 할당된 width, height와 x, y 좌표를 얻는다
 
-![alt text](image-1.png)
+<img width="1014" height="506" alt="image" src="https://github.com/user-attachments/assets/7ffa46b1-e7a6-4ea8-b903-8c95e54f88a8" />
+
 위와 같은 경우 과정은 다음과 같다
 1. Row는 하위 요소인 Image 및 Column을 측정
 2. Image가 측정 / 하위 요소가 없으므로 자체 크기를 결정하고 이를 Row에 다시 보고
