@@ -5,8 +5,8 @@ XML에서는 Fragment 간 전환 코드를 작성 시 FragmentManager를 활용�
 
 여기서 Jetpack Navigation이 등장하였고, 화면 이동, 스택 관리, 데이터 전송까지 손쉽게 구현할 수 있게 되었다
 
-[참고 자료1](https://algosketch.tistory.com/190)
-[참고 자료2](https://medium.com/hongbeomi-dev/compose-navigation-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0-8f9c63426eca)
++ [참고 자료1](https://algosketch.tistory.com/190)
++ [참고 자료2](https://medium.com/hongbeomi-dev/compose-navigation-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0-8f9c63426eca)
 
 ## 장점
 + Fragment 트랜잭션 처리
@@ -59,7 +59,7 @@ nav graph의 노드
 host가 해당 노드의 콘텐츠를 표시한다        
 NavDestination 클래스로 구현
 
-![alt text](image-4.png)
+<img width="776" height="406" alt="image" src="https://github.com/user-attachments/assets/4a70cb08-6a5b-46d7-ac51-4a45c042ad7a" />
 
 navigation 그래프의 각 노드를 구성하는 클래스이며, ComposeNavigator.Destination, NavGraph, DeialogNavigator.Destination 세가지 하위 클래스가 기본적으로 제공된다
 
