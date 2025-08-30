@@ -1,4 +1,4 @@
-![alt text](image.png)
+<img width="1596" height="87" alt="image" src="https://github.com/user-attachments/assets/47c75a04-e880-4031-b335-70e5a10f2241" />
 
 ### java.lang.IllegalArgumentException: com.test.studymate.ui.screens.newplan.NewPlanStateHolder@51f0da cannot be saved using the current SaveableStateRegistry. The default implementation only supports types which can be stored inside the Bundle. Please consider implementing a custom Saver for this class and pass it to rememberSaveable().
 
