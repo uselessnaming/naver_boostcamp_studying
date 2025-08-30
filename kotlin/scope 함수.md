@@ -85,4 +85,4 @@ also는 기존 객체를 수정하거나 변경 없이, 디버깅을 위한 로�
 ## 결과
 해당 순서도처럼 조건에 따라 scope 함수를 달리 써야 한다
 
-![alt text](image.png)
+<img width="890" height="440" alt="image" src="https://github.com/user-attachments/assets/ffc60cae-f99b-4142-b31a-637c46064dee" />
