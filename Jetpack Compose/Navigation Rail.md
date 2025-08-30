@@ -18,7 +18,7 @@ Expanded layout
 + modal
 
 ### Anatomy
-![alt text](image-3.png)
+<img width="817" height="428" alt="image" src="https://github.com/user-attachments/assets/42fb09ee-0d38-4837-b8c9-788a390ae2fc" />
 
 1. Container
 2. Menu (optional)
