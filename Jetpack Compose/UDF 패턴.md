@@ -10,7 +10,8 @@
 2. 상태 업데이트 : 이벤트 핸들러가 상태를 변경할 수 있다
 3. 상태 표시 : 상태 홀더가 상태를 아래로 전달하고 UI가 상태를 표시한다
 
-![alt text](image-5.png)        
+<img width="429" height="527" alt="image" src="https://github.com/user-attachments/assets/5d419762-c8b2-4af8-a047-e8fe082c1d98" />
+
 단방향 데이터 흐름도        
 
 ## 장점?
