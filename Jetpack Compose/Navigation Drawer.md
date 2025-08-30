@@ -6,7 +6,8 @@ Component 측면에서 나오는 컴포넌트로 열었다 닫았다 하는 서�
 [공식 문서](https://m3.material.io/components/navigation-drawer/overview)
 
 ## Specs
-![alt text](image-2.png)
+<img width="832" height="401" alt="image" src="https://github.com/user-attachments/assets/c11c0a6d-f65d-4666-9ce7-78fd6899270b" />      
+
 1. Container 
 2. Headline
 3. Label text
