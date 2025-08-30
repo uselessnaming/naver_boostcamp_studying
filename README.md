@@ -14,3 +14,46 @@
 + [Service](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/XML/Service.md)
 + [Intent 정리](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/XML/intent%20%EC%A0%95%EB%A6%AC.md)
 </details>
+
+## 2주차
+<details>
+<summary>2주차 학습 정리</summary>
+
+## Compose
++ [@Composable](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/%40Composable.md)
++ [Composable 수명 주기](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/Composable%20%EC%88%98%EB%AA%85%20%EC%A3%BC%EA%B8%B0.md)
++ [Compose 단계](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/Compose%20%EB%8B%A8%EA%B3%84.md)
++ [Dynamic Color](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/Dynamic%20Color.md)
++ [Jetpack Compose](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/Jetpack%20Compose.md)
++ [LazyColumn, LazyRow](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/LazyRow%2C%20LazyColumn.md)
++ [Material Theme](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/MaterialTheme.md)
++ [Modifier](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/Modifier.md)
++ [Navigation Drawer](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/Navigation%20Drawer.md)
++ [Navigation Rail](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/Navigation%20Rail.md)
++ [Navigation2](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/Navigation2.md)
++ [Navigation3](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/Navigation3.md)
++ [Remember vs RememberSaveable](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/Remember%EA%B3%BC%20RememberSaveable.md)
++ [Scaffold](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/Scaffold.md)
++ [Surface](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/Surface.md)
++ [TextField](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/TextField.md)
++ [UDF 패턴](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/UDF%20%ED%8C%A8%ED%84%B4.md)
++ [Remember vs MutableState](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/remember%EA%B3%BC%20mutable%20state.md)
++ [Vector Resource vs Painter Resource](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/vectorResource%20vs%20painterResource.md)
+
+## android
++ [SVG vs PNG](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/Svg%20vs%20Png.md)
+
+## Annotation
++ [OptIn](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/annotation/OptIn.md)
++ [Res](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/annotation/Res.md)
+
+## error
++ [cant be saved using the current SaveableStateRegistry](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/error/cannot%20be%20saved%20using%20the%20current%20SaveableStateRegistry.md)
+
+## kotlin
++ [inline 함수](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/kotlin/Inline%20%ED%95%A8%EC%88%98.md)
+
+## warning
++ [Property will not be serialized into a 'Parcel'](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/warning/Property%20will%20not%20be%20serialized%20into%20a%20'Parcel'.md)
+
+</details>
