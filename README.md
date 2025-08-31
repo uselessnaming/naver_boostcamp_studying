@@ -39,6 +39,7 @@
 + [UDF 패턴](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/UDF%20%ED%8C%A8%ED%84%B4.md)
 + [Remember vs MutableState](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/remember%EA%B3%BC%20mutable%20state.md)
 + [Vector Resource vs Painter Resource](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/vectorResource%20vs%20painterResource.md)
++ [Material Theme 색상](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/Material%20Theme%20%EC%83%89%EC%83%81.md)
 
 ## android
 + [SVG vs PNG](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/Svg%20vs%20Png.md)
@@ -52,6 +53,7 @@
 
 ## kotlin
 + [inline 함수](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/kotlin/Inline%20%ED%95%A8%EC%88%98.md)
++ [함수 호출 vs 함수 참조](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/kotlin/%EC%A0%90%20%EC%97%B0%EC%82%B0%20vs%20%EB%8D%94%EB%B8%94%20%EC%BD%9C%EB%A1%A0%20%EC%97%B0%EC%82%B0.md)
 
 ## warning
 + [Property will not be serialized into a 'Parcel'](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/warning/Property%20will%20not%20be%20serialized%20into%20a%20'Parcel'.md)
