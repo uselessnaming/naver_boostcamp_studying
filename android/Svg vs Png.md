@@ -66,6 +66,45 @@ SVG 파일을 사용하면 크기에 상관없이 사용할 수 있다는 부분
 이런 이유들로 인해서 Android Developer에서는 SVG 파일의 크기를 200dp로 제한하고 있다        
 > 이게 상한선인 이유는 SVG 파일의 성능과 PNG 파일의 성능이 교차되는 지점이라서 그런 것 같다
 
+**[2025.09.01 개정]**
+Jetpack Compose에서 내부 상태 변동으로 인해 recomposition될 때 painterResource를 사용해 컴포넌트의 icon을 구성한다면, 해당 icon까지 계속 recomposition되는 것을 확인할 수 있다
+
+여기서 image vector의 경우, resource를 많이 사용하지 않기는 하지만, 이런 부분의 최적화를 위해서 ImageVector.vectorResource를 사용하면 recomposition을 skip할 수 있다
+
+이는 ImageVector를 @Immutable 취급하기 때문이다
+
+```kotlin
+@Composable
+fun A(item: Item){
+    Box{
+        Icon(
+            painter = painterResource(R.id.a)
+        )
+        Text(
+            text = item.text
+        )
+    }
+}
+```     
+위의 코드에서는 item 내부 값이 변동 시 text의 recomposition을 원하지만, 사실 Layout Inspector를 활용해 보면 Icon 또한 recomposition된다
+
+위에서 말했듯 painter를 새로 그리기 떄문이다
+
+```kotlin
+@Composable
+fun A(item: Item){
+    Box{
+        Icon(
+            imageVector = ImageVector.vectorResource(R.id.a)
+        )
+        Text(
+            text = item.text
+        )
+    }
+}
+```
+이렇게 코딩하면 원했던 대로 icon의 recomposition은 skip되는 것을 확인할 수 있다
+
 ## 결론
 SVG 파일을 사용하는 것은 간단한 아이콘을 사용할 때!
 > 실제로 Material Design 아이콘을 많이 사용한다     
