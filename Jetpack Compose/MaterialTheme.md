@@ -2,6 +2,8 @@
 
 내부 Theme 지정 시 Typography와 Color, Type을 지정할 수 있다
 
+[참고 자료 Typography](https://m3.material.io/styles/typography/applying-type)
+
 ## Colors
 + primary: 앱에서 가장 중요시 하는 브랜드 색상으로, 주된 UI 요소에 사용
 + secondary: primary 색상과 보조적인 역할을 하는 브랜드 색상으로, primary를 보완하는 색상
@@ -40,3 +42,9 @@ Material3에서 제공하는 기본 서체
 + label small: 11 / 16
 
 기본적으로 모든 폰트는 Roboto 폰트를 제공하며, title과 label의 경우에는 Roboto Medium을 제공한다
+
+**display** : 큰 화면에서 주로 사용     
+**headline** : 작은 화면에서 강조가 필요할 떄 사용      
+**title** : headline보다 작음 / 작은 것들 중에서 강조가 필요할 때       
+**body** : 왠만한 것들은 body 작성      
+**label** : body보다 더 작은 것들로 캡션과 같이 작은 부분에 사용
