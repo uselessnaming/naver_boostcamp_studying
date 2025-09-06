@@ -3,6 +3,8 @@ Compose에서는 미리보기를 위한 Preview를 지원한다
 
 Preview에서는 widthDp, heightDp, uiMode 등 다양한 속성을 조절하여 미리보기를 할 수 있다
 
+[공식 문서](https://developer.android.com/develop/ui/compose/tooling/previews?hl=ko)
+
 ## 간단한 구조
 ```kotlin
 @Composable
