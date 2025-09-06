@@ -4,6 +4,8 @@ Compose에서는 미리보기를 위한 Preview를 지원한다
 Preview에서는 widthDp, heightDp, uiMode 등 다양한 속성을 조절하여 미리보기를 할 수 있다
 
 [공식 문서](https://developer.android.com/develop/ui/compose/tooling/previews?hl=ko)
+[참고 자료](https://github.com/android/compose-samples/blob/main/Jetsnack/app/src/main/java/com/example/jetsnack/ui/home/cart/Cart.kt)
+> 여기서도 확인해보면 CartPreview에서 ViewModel을 참조하지 않고 데이터 타입을 받아서 Preview를 구성하는 것을 볼 수 있다
 
 ## 간단한 구조
 ```kotlin
