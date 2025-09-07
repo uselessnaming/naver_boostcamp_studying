@@ -59,3 +59,19 @@
 + [Property will not be serialized into a 'Parcel'](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/warning/Property%20will%20not%20be%20serialized%20into%20a%20'Parcel'.md)
 
 </details>
+
+## 3주차
+<details>
+<summary>3주차 학습 정리</summary>
+
+## Jetpack Compsoe
++ [MaterialTheme 추가 학습](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/MaterialTheme.md)
+
+## android
++ [Flow와 LiveData 학습](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/LiveData%20vs%20Flow.md)
++ [target sdk 버전과 compile sdk 버전](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/targetSdk%20VS%20compileSdk.md)
+
+## kotlin
++ [inline 함수를 왜 row, column에서 사용하는 가에 대한 대답](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/kotlin/Inline%20%ED%95%A8%EC%88%98.md)
+
+</details>
