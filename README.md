@@ -75,3 +75,12 @@
 + [inline 함수를 왜 row, column에서 사용하는 가에 대한 대답](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/kotlin/Inline%20%ED%95%A8%EC%88%98.md)
 
 </details>
+
+## 4주차
+<details>
+<summary>4주차 학습 정리</summary>
+
+## 추가 학습 자료
++ [클린 코딩 발표 자료](https://docs.google.com/presentation/d/16c7_CkJO-lT2P0jbUG-NfM2ty9vGstteswGBqKFtA7o/edit?slide=id.g261f0782c07_0_0#slide=id.g261f0782c07_0_0)
+
+</details>
