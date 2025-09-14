@@ -50,3 +50,5 @@ Facade 역할은 서브 시스템의 많은 역할에 대해 '단순 창구' 역
 
 > 이거 어찌 보면 이상적인 ViewModel의 역할이지 않을까?
 > UI는 ViewModel 내부 동작은 모르고 기능만을 사용하는 것처럼 사용한다는 부분에서 Facade 패턴과 유사하다고 생각이 들었다. 다만 ViewModel은 추가적으로 상태 관리를 포함한다.
+
+[참고 자료](https://inpa.tistory.com/entry/GOF-%F0%9F%92%A0-%ED%8D%BC%EC%82%AC%EB%93%9CFacade-%ED%8C%A8%ED%84%B4-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EB%B0%B0%EC%9B%8C%EB%B3%B4%EC%9E%90)
