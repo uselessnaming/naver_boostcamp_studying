@@ -83,4 +83,63 @@
 ## 추가 학습 자료
 + [클린 코딩 발표 자료](https://docs.google.com/presentation/d/16c7_CkJO-lT2P0jbUG-NfM2ty9vGstteswGBqKFtA7o/edit?slide=id.g261f0782c07_0_0#slide=id.g261f0782c07_0_0)
 
+## Jetpack Compose
++ [State-base TextField](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/TextField.md)
+> State-Base TextField를 사용하면 커서 위치와 같은 세세한 조작을 할 수 있다
+
++ [debounce](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/debounce.md)
+> 마지막 이벤트 발생 이후, 일정 시간 동안 추가로 발생하는 이벤트가 없다면 마지막으로 발생한 이벤트를 방출한다
+
++ [snapshot flow](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/Jetpack%20Compose/snapshot%20flow.md)
+> UI 상태에 따른 비동기 작업을 연결할 때 사용한다
+> Snapshot의 상태 변화를 Flow로 관찰할 때 사용
+
+## XML
++ [Fragment lifecycle 및 주의 사항 보충](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/XML/Fragment.md)
+> Fragment에서는 Fragment와 Fragment View 생명주기가 별도로 존재한다
+> Fragment에서 binding을 null로 초기화 하고, onCreateView에서는 할당, onDestroyView에서는 제거하는 방식을 통해 GC가 수집해갈 수 있도록 한다
+
++ [Fragment Binding 관련 중복 코드 개선](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/XML/Fragment%20binding%20%ED%95%A0%EB%8B%B9%20%EC%A4%91%EB%B3%B5%20%EC%BD%94%EB%93%9C%20%EA%B0%9C%EC%84%A0.md)
+> Fragment에서 binding할 때마다 중복적으로 발생하는 코드를 개선하기 위한 방안
+> 1. BaseFragment 정의
+> 2. AutoClearedValue 클래스 정의
+> 3. 외부 라이브러리 활
+
+## Android
++ [Activity Result Contracts](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/ActivityResultContracts.md)
+> Intent를 기반의 작업이나 권한 요청 등 여러 작업을 간단하고 안전하게 처리할 수 있도록 도와주는 API
+
++ [아키텍처](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/architecture.md)
+> 기본적으로 UI Layer와 Data Layer로 구분
+> UI Layer: 앱 데이터를 보여주는 UI와 상태를 관리하는 State Holder로 구성
+> Data Layer: 앱 데이터를 관리하며, 앱 전역에 데이터를 나눠
+
++ [JAVA URI와 Adnroid Uri](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/URI%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC.md)
+> Java는 Serializable을 상속, 안드로이드는 Parcelabel을 상속
+> Data Layer에서는 순수 코틀린으로 동작하는 데 안드로이드에 종속되어 있는 Uri를 사용하면 단위 테스트에서 Mocking 작업이 별도로 필요해 번거롭다
+
+## Design Pattern
++ [Observer 패턴](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/design%20pattern/%EC%98%B5%EC%A0%80%EB%B2%84%20%ED%8C%A8%ED%84%B4.md)
+> 하나의 대상에 대해 하나 혹은 그 이상의 관찰자를 두는 패턴
+> 대상에서 발생한 이벤트를 관찰자가 처리한다
+> 대상의 상태 변화를 여러 관찰자에게 알려, 객체 간의 결합도를 낮춰주기 위한 패턴
+
++ [Repository 패턴](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/design%20pattern/Repository%20%ED%8C%A8%ED%84%B4.md)
+> Data 출처와 상관없이 동일한 인터페이스로 접근할 수 있도록 하는 패턴
+
++ [Facade 패턴](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/design%20pattern/Facade%20%ED%8C%A8%ED%84%B4.md)
+> 복잡한 클래스들의 관계를 인터페이스로 추상화하여 내부 동작을 몰라도 사용할 수 있도록 하는 디자인 패턴
+> 집약화하기 위한 패
+
+## Kotlin
++ [자료 구조 - Stack](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/kotlin/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md)
+> Stack을 구성할 때 Deque 인터페이스를 구현하는 ArrayDeque을 사용한다
+> Array<Vector>로 구성된 Stack은 Deque보다 비효율적
+> ArrayDeque는 resizable circular array로 마지막 요소 추가 시 앞 자리를 확인하여 있다면 앞에다가 데이터를 추가하는 방식으로 효율성을 늘렸다
+
++ [Array vs List](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/kotlin/Array%20vs%20List.md)
+> Array는 메모리 구조상 연속적, List는 비연속적
+> Array는 요소 접근이 빠름, List는 포인터 구조로 되어있어 느림
+> Array는 삭제 삽입이 느림, List는 삽입 삭제가 빠름름
+
 </details>
