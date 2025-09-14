@@ -21,10 +21,17 @@ Fragment Transaction 과정에서 addToBackStack()을 호출하여 fragment mana
 즉 정리해보면 Activity의 Back Stack이 존재하나 해당 Activity에서 여러 Fragment의 상태에 대해 관리할 수 있다       
 그리고 fragment의 back stack은 결국 fragment manager가 관리하며 이는 activity에 종속적이게 된다고 정리할 수 있다     
 
+[참고 블로그](https://kkamsoon-developer.tistory.com/19)
+
 ## 생명 주기
 <img width="511" height="638" alt="image" src="https://github.com/user-attachments/assets/a73cd5df-faf5-4425-8183-1c3902573cf8" />
 
 android developer에서 제공하는 Fragment의 lifecycle이다      
+
+보면 Fragment의 Lifecycle은 2개가 존재한다      
+Fragment의 자체 Lifecycle과 View의 Lifecycle이다        
+그래서 확인해보면 View Lifecycle은 Fragment Lifecycle보다 짧기 때문에 초기화나 참조에 있어 조심해야 한다        
+따라서 Fragment에서 binding할 경우  `DestroyView()`에서 binding에 null을 할당하여 메모리를 해제해 줘야 한다
 
 여기서 생략된 부분이 존재한다        
 
