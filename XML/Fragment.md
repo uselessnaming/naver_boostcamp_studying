@@ -21,6 +21,7 @@ Fragment Transaction 과정에서 addToBackStack()을 호출하여 fragment mana
 즉 정리해보면 Activity의 Back Stack이 존재하나 해당 Activity에서 여러 Fragment의 상태에 대해 관리할 수 있다       
 그리고 fragment의 back stack은 결국 fragment manager가 관리하며 이는 activity에 종속적이게 된다고 정리할 수 있다     
 
+[공식 문서](https://developer.android.com/topic/libraries/view-binding?hl=ko#fragments)     
 [참고 블로그](https://kkamsoon-developer.tistory.com/19)
 
 ## 생명 주기
@@ -30,8 +31,33 @@ android developer에서 제공하는 Fragment의 lifecycle이다
 
 보면 Fragment의 Lifecycle은 2개가 존재한다      
 Fragment의 자체 Lifecycle과 View의 Lifecycle이다        
-그래서 확인해보면 View Lifecycle은 Fragment Lifecycle보다 짧기 때문에 초기화나 참조에 있어 조심해야 한다        
-따라서 Fragment에서 binding할 경우  `DestroyView()`에서 binding에 null을 할당하여 메모리를 해제해 줘야 한다
+Fragment는 Fragment View보다 Lifecycle이 길다       
+Fragment는 Fragment의 재사용을 대비해 Fragment View들을 메모리에 보관하도록 되어 있다       
+그래서 Fragment의 onDestroy 호출 후 Fragment에 대한 레퍼런스는 존재하지 않지만 내부적으로 View들은 재사용을 위해 보관하고 있다      
+
+```kotlin
+private var _binding: FragmentBinding? = null
+private val binding get() = _binding!!
+
+override fun onCreateView(
+    inflater: LayoutInflater,
+    container: ViewGroup?,
+    savedInstanceState: Bundle?
+): View? {
+    _binding = FragmentBinding.inflate(inflater, container, false)
+    val view = binding.root
+    return view
+}
+
+override fun onDestroyView(){
+    super.onDestroyView()
+    _binding = null
+}
+```
+공식 문서에서는 위와 같이 binding 객체를 null로 초기화한 후에, `onCreateView`에서 binding을 할당하고 `onDestroyView`에서 binding을 해제하는 로직을 작성해야 한다        
+이 방식을 통해서 GC에서 수집해갈 수 있도록 해야 메모리 누수에서 자유로울 수 있다        
+
+[binding 관련 보일러 코드를 제거하기 위한 방안 모색]()
 
 여기서 생략된 부분이 존재한다        
 
