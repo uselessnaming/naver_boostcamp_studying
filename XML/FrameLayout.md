@@ -20,3 +20,7 @@ FrameLayout은 하나의 자식을 갖는 것이 의도이니만큼 하나의 �
 
 CardView를 사용할 때 내부에 Layout을 하나 배치한 후에 사용해야 한다     
 그렇지 않는다면 결과적으로 마지ㅏ
+
+**Q 막상 Fragment를 사용할 때는 FragmentContainerView를 사용하는데..**      
+FragmentContainerView 또한 FrameLayout을 상속한다       
+따라서 FrameLayout을 사용하고 있다는 것이다
