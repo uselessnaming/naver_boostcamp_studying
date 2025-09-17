@@ -18,5 +18,5 @@ FrameLayout은 하나의 자식을 갖는 것이 의도이니만큼 하나의 �
 
 **Q CardView나 NestedScrollView가 FrameLayout을 상속받는 것으로 갖는 특징**      
 
-FrameLayout을 상속받는 View를 사용할 때 내부에 Layout을 하나 배치한 후에 사용해야 한다     
-그렇지 않는다면 배치한 순서대로 겹겹이 겹쳐지며 원하는 layout을 볼 수 없다
+CardView를 사용할 때 내부에 Layout을 하나 배치한 후에 사용해야 한다     
+그렇지 않는다면 결과적으로 마지ㅏ
