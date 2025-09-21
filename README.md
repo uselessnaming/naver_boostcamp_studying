@@ -182,7 +182,7 @@
 + [ViewModel에서 init 블록을 사용한 상태 초기화](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/ViewModel%20init%20%EB%B8%94%EB%A1%9D.md)
 > ViewModel 생성 자체와 강한 응집도를 갖는다    
 > 따라서 기능 단위 테스트 코드 작성이 어려워진다    
-> Lazy Observing을 활용하여 내가 데이터가 필요할 때 데이터를 수집하거나 관찰하는 것으로 해결하자    
+> **On-demand Observing**을 활용하여 내가 데이터가 필요할 때 데이터를 수집하거나 관찰하는 것으로 해결하자    
 
 ## Design Pattern
 + [Adapter 패턴](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/design%20pattern/Adapter%20%ED%8C%A8%ED%84%B4.md)
