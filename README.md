@@ -143,3 +143,50 @@
 > Array는 삭제 삽입이 느림, List는 삽입 삭제가 빠름름
 
 </details>
+
+## 5주차
+<details>
+<summary>5주차 학습 정리</summary>
+
+## CS
++ [REST API](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/CS/REST%20API.md)
+> HTTP 메소드(행위)와 자원(URI), 그리고 표현으록 구성
+> 특징: Uniform, Stateless, Caching, Self-descriptiveness, Client-Server, 계층형 구조
+
++ [URI vs URL](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/CS/URI%20vs%20URL.md)
+> URI는 Uniform Resource Identifier, URL은 Uniform Resource Location
+> URI는 리소스에 대한 식별자, URL은 리소스에 대한 위치 식별자
+> URI가 URL보다 더 큰 범
+
+## XML
++ [FrameLayout](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/XML/FrameLayout.md)
+> 여러 개의 자식들을 추가할 수는 있으나, 순차적으로 Stack처럼 쌓임
+> 보통 하나의 뷰를 교체해서 사용하는 식으로 사용한다
+
+## Android
++ [LiveData](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/LiveData.md)
+> 관찰 가능한 데이터 홀더 클래스 / lifecycle을 인식한다
+> LiveData에 대한 옵저버를 등록하고, LiveData의 값이 변경된다면 구독하고 있는 observer들에게 이를 알린다. observer들은 이 이벤트를 처리한다
+> Observer는 어떤 lifecycle에 결합되어 있으며, `STARTED` 혹은 `RESUMED` 상태일때만 활성 상태로 간주하며 알림을 받는다
+
++ [Network Library](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/Network%20%EC%97%B0%EA%B2%B0%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC.md)
+> HttpUrlConnection 클래스 사용
+>> URL 마다 openConenction 명령으로 연결을 해야 한다
+>> timeout 등 세세한 설정을 다 해줘야 한다
+> Retrofit 클래스 사용
+>> 내부적인 동작을 자동적으로 넘겨준다
+>> Interceptor를 활용해 공통 헤더를 넘길 수 있다
+>> 한 번 생성하면 해당 URL을 기반으로 연결되는 처리를 계속 할 수 있다
+>> 좀 더 직관적이다
+
++ [ViewModel에서 init 블록을 사용한 상태 초기화](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/ViewModel%20init%20%EB%B8%94%EB%A1%9D.md)
+> ViewModel 생성 자체와 강한 응집도를 갖는다
+> 따라서 기능 단위 테스트 코드 작성이 어려워진다
+> Lazy Observing을 활용하여 내가 데이터가 필요할 때 데이터를 수집하거나 관찰하는 것으로 해결하자
+
+## Design Pattern
++ [Adapter 패턴](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/design%20pattern/Adapter%20%ED%8C%A8%ED%84%B4.md)
+> Adapter 패턴은 관리를 위임하는 것이다
+> A 클래스와 B 클래스가 있을 때 A 클래스가 Adapter 클래스를 통해서 B 클래스를 조작하게 된다
+> 따라서 A 클래스는 B 클래스와 관련된 것을 모두 모르고, Adapter 클래스의 동작만을 알게 되어 Adapter 클래스의 동작만 호출하는 방식이
+</details>
