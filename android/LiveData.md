@@ -10,20 +10,27 @@ LifecyclerOwner 인터페이스를 구현하는 객체와 페어링된 관찰자
 [공식 자료](https://developer.android.com/topic/libraries/architecture/livedata?hl=ko)
 
 ## 장점
+LiveData의 장점
+
 ### UI와 데이터 상태의 일치 보장
 LiveData는 Observer 패턴을 따르기 떄문에, LiveData에서 데이터 갱신이 일어나면 이를 Observer가 확인하고 처리해줍니다.        
 따라서 Event 생성 시마다 UI 업데이트를 할 필요가 없어졌습니다.
 
-### 메모리 누수 없음
-관찰자는 Lifecycle 객체에 결합되어 수명 주기가 끝난다면 자동으로 삭제된다
-
-### Stopped 상태의 Activity에서도 비정상 종료 없음
-Activity가 백 스택에 있는 것을 포함해 관찰자에 결합된 수명 주기가 비활성 상태에 있다면 관찰자는 어떤 LiveData도 받지 않는다
+LiveData의 `mObservers`를 확인하면 observer와 wrapper에 대한 정보를 가지고 있습니다. ObserverWrappter의 내부에는 activeStateChanged 함수가 존재합니다. Lifecycle Owner의 lifecycle에 따라 active 여부를 결정하고, active 상태라면 `distpachingValue()` 함수를 호출합니다. 이 함수를 통해서 활성 상태에 있는 observer들에게 데이터 값의 변화를 알립니다. 
+따라서 처음에 observer와 lifecycle owner를 등록해주면 LiveData는 수동 제어 없이 자동적으로 lifecycle을 감지하고 그에 맞게 동작하게 됩니다.
 
 ### 수명 주기를 더 이상 수동으로 처리하지 않음
 UI 구성 요소는 Observer를 제어하지 않는다.      
 다만 Observer를 통해 변화된 데이터에 따라 처리해 줄 뿐이다.     
 LiveData는 관찰하는 동안 수명 주기 상태의 변경을 인식하기 떄문에 이를 자동으로 관리해준다
+
+### 메모리 누수 없음
+관찰자는 Lifecycle 객체에 결합되어 수명 주기가 끝난다면 자동으로 삭제된다
+
+LiveData의 `LifecycleBoundObserver` 클래스의 `onStateChanged()` 함수를 확인해보면 lifecycle이 DESTORYED 상태라면 observer를 제거하고 있습니다. 이를 통해 Observer가 Lifecycle 객체에 결합되어 lifecycle이 종료될 경우 같이 제거되는 것을 알 수 있습니다.
+
+### Stopped 상태의 Activity에서도 비정상 종료 없음
+Activity가 백 스택에 있는 것을 포함해 관찰자에 결합된 수명 주기가 비활성 상태에 있다면 관찰자는 어떤 LiveData도 받지 않는다
 
 ### 최신 데이터 유지
 관찰자가 비활성 상태에서 활성 상태가 될 때 최신 데이터를 수집한다       
