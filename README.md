@@ -190,3 +190,47 @@
 > A 클래스와 B 클래스가 있을 때 A 클래스가 Adapter 클래스를 통해서 B 클래스를 조작하게 된다    
 > 따라서 A 클래스는 B 클래스와 관련된 것을 모두 모르고, Adapter 클래스의 동작만을 알게 되어 Adapter 클래스의 동작만 호출하는 방식이    
 </details>
+
+## 6주차
+<details>
+<summary>6주차 학습 정리</summary>
+
+### CS
++ [프롬프트 엔지니어링](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/CS/%ED%94%84%EB%A1%AC%ED%94%84%ED%8A%B8%20%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81.md)     
+> AI에게 효율적인 답을 얻기 위해 사용하는 방법      
+> Zero-shot, Few-shot, Chain-of-Thought 방법이 존재한다
+
+### XML
++ [DialogFragment](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/XML/DialogFragment.md)       
+> Dialog를 생성하고 호스팅하도록 설계된 Fragment        
+> FragmentManager가 백스택을 관리하여 Configuration Change에서도 안전하다       
+> 또한 복합적인 UI 구성에도 유리하다
+
++ [ViewBinding](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/XML/ViewBinding.md)     
+> android에서 res/layout 폴더의 xml에 대해서 자동적으로 binding을 생성해주는 기능
+
+### android
++ [LiveData](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/LiveData.md)       
+> Lifecycle을 인식하는 관측 가능한 데이터 Holder        
+> 관찰자가 active 상태일 때만 데이터 변동을 알려준다        
+> 메모리 누수 없음
+> 최신 데이터 유지
+> 수명 주기를 수동으로 처리하지 않음
+
+### Kotlin
++ [시간을 나타내는 class](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/kotlin/%EC%8B%9C%EA%B0%84%EC%9D%84%20%EB%82%98%ED%83%80%EB%82%B4%EB%8A%94%20class.md)     
+> LocalDateTime은 그저 시간의 정보만        
+> OffsetDataTime은 GMT를 기준으로 한 시차 계산 포함 (GMT는 경도 0을 기준으로 한 지구의 시간대 계산)     
+> ZonedDataTime은 지역 정보까지 포함
+
++ [Backing Field와 Property](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/kotlin/Backing%20Field%EC%99%80%20Property.md)     
+> Backing Property를 활용하면 컴파일 시 더 효율적인 코드를 생성할 수 있다       
+> `get() = _a`와 `a = _a`는 다른 코드를 생성한다
+
++ [함수형 인터페이스](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/kotlin/%ED%95%A8%EC%88%98%ED%98%95%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4.md)        
+> 추상 Method가 하나인 interface        
+> 람다를 통해 바로 할당이 가능      
+> 호출 또한 직접 접근하여 사용할 수 있다        
+> 보일러 코드 최소화, 람다 사용
+
+</details>
