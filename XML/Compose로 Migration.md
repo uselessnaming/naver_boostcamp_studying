@@ -31,4 +31,12 @@ Composition이 dispose되고 난 후에는 GC가 남은 메모리를 자동으�
 해당 전략은 `Activity`나 `Fragment`처럼 `lifecycle`이 `destroyed`가 될 때 해제하는 전략이다.        
 따라서 Fragment의 View가 파괴될 때 dispose되므로 Fragment에 View가 재할당 시 중복 생성을 방지할 수 있다
 
+이 전략은 다른 전략과 달리 object가 아닌 class로 선언되었다     
+왜?     
+
+런타임 내에 다른 `lifecycle` 인스턴스를 받아야 하기 때문에 class로 선언된 것이다
+
 ### DisposeOnViewTreeLifecycleDestroyed
+해당 전략은 Tree 내에서 가장 가까운 lifecycle을 찾고, 그 lifecycle에 따라 destoryed되면 자동적으로 dispose 해주는 전략이다.      
+즉 명시적으로 Lifecycle을 전달하지 않아도 View 계층 내에서 가장 가까운 lifecycle을 자동으로 연결해주는 전략이야.        
+따라서 Fragment에서 view의 lifecycle을 따르는 ComposeView의 경우에 사용하게 되는 전략이야
