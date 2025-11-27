@@ -22,4 +22,4 @@
 
 기본적으로는 Table 생성 시 도메인을 지정한다. `reservation_status enum("CONFIRMED", "CANCELLED", "COMPLETED") NOT NULL` 와 같이 선언할 수 있다.     
 여기서 enum 내부에 해당하는 값들만 넣을 수 있으며, 다른 값들이 들어가면 안된다.         
-여기서 NOT NULL 또한 null 값이 들어가지 않도록 제한하는 제약 조건이다.ㄴ
+여기서 NOT NULL 또한 null 값이 들어가지 않도록 제한하는 제약 조건이다.
