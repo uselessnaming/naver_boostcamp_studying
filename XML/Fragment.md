@@ -57,7 +57,7 @@ override fun onDestroyView(){
 공식 문서에서는 위와 같이 binding 객체를 null로 초기화한 후에, `onCreateView`에서 binding을 할당하고 `onDestroyView`에서 binding을 해제하는 로직을 작성해야 한다        
 이 방식을 통해서 GC에서 수집해갈 수 있도록 해야 메모리 누수에서 자유로울 수 있다        
 
-[binding 관련 보일러 코드를 제거하기 위한 방안 모색]()
+[binding 관련 보일러 코드를 제거하기 위한 방안 모색](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/XML/Fragment%20binding%20%ED%95%A0%EB%8B%B9%20%EC%A4%91%EB%B3%B5%20%EC%BD%94%EB%93%9C%20%EA%B0%9C%EC%84%A0.md)
 
 여기서 생략된 부분이 존재한다        
 
