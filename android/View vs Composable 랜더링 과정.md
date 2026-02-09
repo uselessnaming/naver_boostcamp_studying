@@ -42,6 +42,7 @@ Recomposition이 발생하면 변경되는 값에 따라서 특정 단계를 재
        │      ├─ Button
        │      ├─ Button
        │      ├─ Button
+       │      ├─ Box (scale 변경)
        │      └─ Text   ← Inner Text
        └─ else
           └─ Content (Root)
@@ -49,6 +50,7 @@ Recomposition이 발생하면 변경되는 값에 따라서 특정 단계를 재
                  ├─ Button
                  ├─ Button
                  ├─ Button
+                 ├─ Box (scale 변경)
                  └─ Text   ← Inner Text
 ```
 
