@@ -2,7 +2,7 @@
 안드로이드 Composable에서 context에 접근할 때에는 `CompositionLocal`로 공유되는 context에 접근하게 된다. 하지만 코드를 확인해보면 어디에도 `CompositionLocal`로 context를 주입하는 부분이 존재하지 않는다. 
 > 어디에 있을까?
 
-1. Activity의 `setContent()`
+**1. Activity의 `setContent()`**  
 안드로이드 Composable을 사용할 때에는 XML의 Activity인 `AppCompatActivity()`가 아닌 `ComponentActivity()`를 상속받게 된다. 해당 Activity에서는 setContent로 Composable이 시작된다.
 
 ```kotlin
@@ -32,7 +32,7 @@ public fun ComponentActivity.setContent(
 ```
 이렇게 정의된 함수로 들어올 수 있다. 코드 중 else 분기를 확인해보면 기존 존재하는 Composable이 없다면 CompseView를 보여주도록 정의되어 있다.
 
-2. ComposeView
+**2. ComposeView**  
 ```kotlin
 class ComposeView
 @JvmOverloads
@@ -41,7 +41,7 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ```
 `ComposeView`로 들어가보면 `AbstractComposeView`를 상속받고 있다. 그리고 이 때 context를 전달하고 있음을 확인할 수 있다.
 
-3. AbstractComposeView.setContent
+**3. AbstractComposeView.setContent**  
 ```kotlin
 override fun onAttachedToWindow() {
     super.onAttachedToWindow()
@@ -117,7 +117,7 @@ private fun doSetContent(
 ```
 함수를 확인해보면 `AbstractCompotView.setContent()` 함수는 결국 `doSetContent()`를 return하고 있다. 한 번 더 타고 들어가면 이는 결과적으로 `WrappedComposition`의 `setContent()` 호출로 마무리되는 것을 확인할 수 있다.
 
-4. WrappedComposition의 setContent
+**4. WrappedComposition의 setContent**  
 ```kotlin
 override fun setContent(content: @Composable () -> Unit) {
     owner.setOnViewTreeOwnersAvailable {
@@ -154,7 +154,7 @@ override fun setContent(content: @Composable () -> Unit) {
 ```
 해당 과정에서 최종적으로 `CompositionLocalProvider`를 통해 `ProviderAndroidCompositionLocals`를 주입해주고 있는 것을 확인할 수 있다.
 
-5. ProviderAndroidCompositionLocals
+**5. ProviderAndroidCompositionLocals**
 ```kotlin
 @Composable
 @OptIn(ExperimentalComposeUiApi::class)
@@ -212,3 +212,6 @@ internal fun ProvideAndroidCompositionLocals(
 
 ## 도식화
 ![alt text](image-5.png)
+
+## 참고 자료
+[블로그 자료](https://pluu.github.io/blog/android/2024/11/10/Compose/?utm_source=chatgpt.com)
