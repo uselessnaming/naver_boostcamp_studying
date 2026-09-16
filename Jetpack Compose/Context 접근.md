@@ -211,7 +211,7 @@ internal fun ProvideAndroidCompositionLocals(
 결과적으로 `LocalContext`로 주입할 경우 해당 `setContent`를 호출하는 곳의 context를 가지고 활용할 수 있게 된다. 일반적으로는 `Activity`가 된다.
 
 ## 도식화
-![alt text](image-5.png)
+<img width="933" height="727" alt="image" src="https://github.com/user-attachments/assets/7bdee54c-d70d-4c2c-ab81-aba98fadde62" />
 
 ## 참고 자료
 [블로그 자료](https://pluu.github.io/blog/android/2024/11/10/Compose/?utm_source=chatgpt.com)
