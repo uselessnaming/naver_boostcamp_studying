@@ -18,7 +18,7 @@ lock을 활용해 해당 이벤트가 처리되는 동안 새로운 이벤트가
 
 ## pointer input 이벤트 처리 구조
 
-![alt text](image-4.png)
+<img width="1889" height="524" alt="image" src="https://github.com/user-attachments/assets/afb4c63a-a908-4dfb-a47e-b13781771db6" />
 > `ListItem`이 부모, `Button`은 자식
 
 `ListItem`의 Initial -> `Button`의 Initial -> `Button`의 Main -> `Button`의 Main -> `ListItem`의 Final -> `Button`의 Final 순서로 이벤트를 처리하게 된다        
