@@ -38,7 +38,7 @@ dokka {
 
 `dokkaSourceSets`에서 설정했던 `reportUndocumented`의 조건은 
 
-![alt text](image-1.png)
+<img width="1056" height="338" alt="image" src="https://github.com/user-attachments/assets/4177c4c9-0419-4057-bcbe-99c0cff2c502" />
 
 위의 표와 동일하다
 
@@ -50,5 +50,6 @@ Dokka는 공개된 문서들 중에서 문서화가 되지 않은 것들을 문�
 결과적으로 private한 클래스 혹은 function이거나 상속된 문서가 있다면 문제가 되지 않는다
 
 ## 실행 결과
-![alt text](image.png)
+<img width="1880" height="909" alt="image" src="https://github.com/user-attachments/assets/347e6ac8-2f90-488e-81f3-77a1b6e049f0" />
+
 위 사진과 같이 문서를 생성해주며, 확인해보면 type과 function으로 분리하여 만들어준다
