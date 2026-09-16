@@ -13,7 +13,7 @@ Adapter를 구성하는 방식은 2가지가 있다
 + 합성을 활용하기 때문에 런타임 중 Adpatee(Service)가 결정되어 유연하다
 + Adaptee(Service) 객체를 필드 변수로 저장해야 하므로 공간 차이 비용이 든다
 
-![alt text](image-1.png)
+<img width="802" height="435" alt="image" src="https://github.com/user-attachments/assets/0e955a8a-bf4f-40bb-af24-d1fe9f6d6f56" />    
 
 구조는 이렇게 되어 있다     
 **1 Adaptee(Service)** : 어댑터 대상 객체. 기존 시스템 / 외부 시스템 / 써드파티 라이브러리      
@@ -33,7 +33,7 @@ RecyclerView는 Adapter를 소유하고, Adapter는 내부에 ViewHolder에 대�
 + Adaptee를 상속했기 때문에 따로 객체 구현없이 바로 코드 재사용이 가능하다      
 + 자바에서는 다중 상속 불가 문제가 있어 권장하지 않는 방식이다 (코틀린에서도 다중 상속은 불가능하여 사용하지 않을 것 같다)
 
-![alt text](image-2.png)
+<img width="726" height="419" alt="image" src="https://github.com/user-attachments/assets/eba695fd-64c8-4f43-b99c-4b18840f0331" />    
 
 이런 구조도를 가지며 객체 어댑터와의 차이점은 상속을 이용해 구성한다는 것이다
 
