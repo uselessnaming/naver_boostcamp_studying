@@ -27,7 +27,7 @@ build-logic에서 settings.gradle 파일이 없다면 compile build로 인식하
 
 ## build-logic 추가 후 동작 과정
 
-![alt text](image.png)
+<img width="3800" height="3850" alt="image" src="https://github.com/user-attachments/assets/a2b3011a-2862-49f7-b45e-a3bddbddc6b9" />
 
 root project를 build할 시 **Gradle**이 **settings.gradle**을 실행하면서 `Settings 객체`가 생성됩니다.  
 
