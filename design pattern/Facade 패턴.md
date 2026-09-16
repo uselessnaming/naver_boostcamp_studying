@@ -6,7 +6,7 @@
 
 이처럼 Facade 패턴은 복잡하게 얽혀 있는 것을 정리해서 사용하기 편한 인터페이스를 고객에서 제공한다고 보면된다
 
-![alt text](image.png)
+<img width="763" height="462" alt="image" src="https://github.com/user-attachments/assets/edb425b1-41a7-4e21-b756-121563c00a07" />    
 
 1. Facade
 서브시스템 기능을 편리하게 사용할 수 있도록 하기 위해 여러 시스템과 상호 작용하는 복잡한 로직을 재정리해서 높은 레벨의 인터페이스를 구성한다        
