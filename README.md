@@ -234,3 +234,16 @@
 > 보일러 코드 최소화, 람다 사용
 
 </details>
+
+---
+
+# 추후 학습
+## 9월 3주차
+### Android
++ [build-logic 적용](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/build-logic%20%EB%8F%99%EC%9E%91%20%EA%B3%BC%EC%A0%95.md)
+> build-logic 간단한 추가 방법  
+> build-logic을 추가 후 build 시 동작 과정
+
++ [build 과정](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/build%20%EA%B3%BC%EC%A0%95.md)
+> build 시 사이클  
+> 사이클에 해당하는 작업

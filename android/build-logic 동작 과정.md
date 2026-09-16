@@ -3,8 +3,6 @@
 멀티 모듈을 사용하는 과정에서 모듈을 추가하게 되면 공통적으로 build.gradle 파일을 관리하게 됩니다.  모듈의 개수가 많아지면 많아질수록 각 build.gradle 파일들의 공통 설정에 대한 중복적인 코드가 늘어나고, 버전 코드 등 여러 설정 값들이 개별 관리될 가능성이 있습니다.  따라서 build-logic을 활용하는 것으로 이런 불편함을 해소할 수 있습니다.
 
 ## build-logic 적용 방법
-![alt text](image-14.png)
-
 root project에 build-logic 경로 추가합니다.
 
 ```kotlin
