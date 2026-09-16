@@ -13,7 +13,8 @@
 + Shape: Flat or wavy
 
 ## Anatomy
-![alt text](image-1.png)
+<img width="2048" height="600" alt="image" src="https://github.com/user-attachments/assets/0c814bbc-b861-40cf-84c6-2b429d6c3696" />
+
 1. Active Indicator
 2. Track
 3. Stop Indicator
