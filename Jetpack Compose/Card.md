@@ -37,7 +37,7 @@ background로부터 분리 정도 (강조되는 정도가 다르다)
 outlined cards >> elevated cards >> filled cards
 
 ### Anatomy
-![alt text](image-3.png)
+<img width="2048" height="1300" alt="image" src="https://github.com/user-attachments/assets/d53cd448-aeda-44fc-899d-f6dda76b55d6" />
 1. Container
 2. Headline
 3. Subhead
