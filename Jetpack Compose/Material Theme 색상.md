@@ -1,6 +1,6 @@
 # Material Theme 색상
 
-![alt text](image.png)
+<img width="574" height="416" alt="image" src="https://github.com/user-attachments/assets/dae9f4da-a6f2-4e07-b5c6-3534f6dca471" />
 
 색상표
 
