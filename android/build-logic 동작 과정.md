@@ -26,6 +26,9 @@ setting.gradle 파일에서 `pluginManager{ }` 블록은 가장 최전방에 위
 build-logic에서 settings.gradle 파일이 없다면 compile build로 인식하지 못하기 때문에 반드시 settings.gradle 파일을 추가해줘야 합니다.
 
 ## build-logic 추가 후 동작 과정
+
+![alt text](image.png)
+
 root project를 build할 시 **Gradle**이 **settings.gradle**을 실행하면서 `Settings 객체`가 생성됩니다.  
 
 스크립트 가장 위에 선언되어 있는 `pluginManagement{ } 블록`이 실행됩니다. 내부 블록 중 `includeBuild()`가 실행됩니다.  
