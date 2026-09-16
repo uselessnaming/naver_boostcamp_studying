@@ -11,7 +11,7 @@ View Model은 state holder의 개념도 포함하고 있다
 
 ViewModel을 활용할 때의 흐름은 다음과 같다      
 
-![alt text](image-2.png)
+<img width="1852" height="1656" alt="image" src="https://github.com/user-attachments/assets/65b26790-a5c9-405f-9346-1e772f806415" />
 
 사진을 보면, UI elements는 단순히 이벤트들을 트리거한다        
 이 트리거한 이벤트를 기반으로 ViewModel은 Data Layer에 상태 변환을 전달한다        
