@@ -1,14 +1,14 @@
 # Context
 ## View에서의 Context
-![alt text](image-9.png)  
+<img width="440" height="121" alt="image" src="https://github.com/user-attachments/assets/64dc930a-6256-4807-abaf-de140fd171ef" />        
 일반적으로 Custom View를 구현한다고 하면 View를 상속 받아서 처리하게 된다  
 
 View의 내부 코드를 확인해보면 생성자에 Context가 포함됨을 알 수 있다
-![alt text](image-10.png)  
+<img width="981" height="382" alt="image" src="https://github.com/user-attachments/assets/fb0ea3af-3118-422c-8454-cc0892b7a644" />      
 
 이를 통해 각각의 View들 모두 Context를 주입받아서 처리하고 있음을 알 수 있다. View들은 객체로서 생성과 소멸이 명확하고, 이 때 사용할 외부 정보들을 처리하기 위해 Context를 소유하게 된다.
 
-![alt text](image-11.png)  
+<img width="446" height="276" alt="image" src="https://github.com/user-attachments/assets/b4463a68-60bc-46c7-895d-def17e35d107" />        
 Activity는 Context를 상속받아서 구현되고, 해당 Activity에서 소유하는 View에 일반적으로는 Activity나 Fragment의 Context를 전달하여 처리하게 된다.
 
 ## Composable에서의 Context
