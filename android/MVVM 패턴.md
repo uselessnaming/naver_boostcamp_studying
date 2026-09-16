@@ -1,5 +1,5 @@
 # MVVM 패턴
-![alt text](image-1.png)
+<img width="915" height="236" alt="image" src="https://github.com/user-attachments/assets/d1e7fed6-4593-4133-832e-ea7a9847736b" />
 
 Model-View-ViewModel 패턴       
 1. View에서 사용자와의 상호작용을 통해 이벤트를 감지 
