@@ -33,7 +33,7 @@ ViewModel은 이를 사용해 비즈니스 관련 작업을 트리거한다.
 Fragment의 경우 분리될 때       
 탐색 항목의 경우 백 스택에서 삭제될 때
 
-![alt text](image.png)
+<img width="522" height="543" alt="image" src="https://github.com/user-attachments/assets/f9a7da81-860e-4b27-8dd2-ba4a703fd9d8" />     
 
 해당 다이어그램을 보면 Configuration Change에서도 ViewModel이 살아남는 것을 확인할 수 있다
 
