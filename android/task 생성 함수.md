@@ -23,6 +23,6 @@ kotlin의 lazy 키워드처럼 인스턴스화는 실제로 필요한 순간이 
 하지만 `register()`의 경우에는 끝까지 실체화되지 않습니다.
 
 ## 결과
-![alt text](image.png)  
+<img width="1040" height="470" alt="image" src="https://github.com/user-attachments/assets/905be97a-8f43-422b-8e65-3f96597fe5fa" />  
 
 `create()`에서 `register()`로 변경되면서 task들의 개수가 많고 실행되지 않는 task 비중이 큰 프로젝트일수록 시간이 많이 단축될 수 있습니다.
