@@ -247,3 +247,10 @@
 + [build 과정](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/build%20%EA%B3%BC%EC%A0%95.md)
 > build 시 사이클  
 > 사이클에 해당하는 작업
+
++ [task 생성 함수](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/android/task%20%EC%83%9D%EC%84%B1%20%ED%95%A8%EC%88%98.md)
+> create()함수로 사용하던 것을 register() 함수로 변경  
+> 인스턴스를 미리 생성하는 것이 아닌 필요 시점에 생성하는 것으로 build 시간 단축
+
++ [build 생명 주기에 따른 hook]
+> build 과정에 따른 log를 찍거나 설정을 변경하는 등 올바른 시점에 사용할 수 있는 hook 설명
