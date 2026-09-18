@@ -2,7 +2,7 @@
 
 [참고자료](https://docs.gradle.org/current/userguide/build_lifecycle.html)
 
-![alt text](image-1.png)  
+<img width="2900" height="2100" alt="image" src="https://github.com/user-attachments/assets/9faf941e-eaee-41fe-afe8-23f79476eddf" />      
 
 위 그림과 같이 build 시 기본 생명주기는 **`Initialization`** -> **`Configuration`** -> **`Execution`** 단계로 진행됩니다.
 
@@ -59,7 +59,7 @@ Execution 단계에서 사용할 수 있는 hook 종류
 </details>
 
 ## 요약
-![alt text](image.png)
+<img width="860" height="1300" alt="image" src="https://github.com/user-attachments/assets/7d7b12e9-4896-485b-a3fe-87a3d8369b0c" />    
 
 Initialization 단계에서 전역 변수를 설정하고, 정의된 build 구조를 평가합니다.   
 Configuration 단계에서는 task들을 등록하고 property들을 설정합니다.  
