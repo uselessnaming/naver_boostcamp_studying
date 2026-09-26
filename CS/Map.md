@@ -31,7 +31,7 @@ HashMap이 효율적이기 위해서는 hashMap의 총 개수가 capacity * 0.75
 다만 TreeMap의 경우 항상 정렬된 상태로 유지되기 때문에 특정 조건이 있는 상황이라면 TreeMap이 유용하게 사용될 수 있습니다.
 
 ## 실제 소요 시간 차이
-![TreeMap vs HashMap 천만 데이터 비교](<TreeMap, HashMap 데이터 10000000개 get, put 소요 시간 비교.png>)
+<img width="450" height="347" alt="image" src="https://github.com/user-attachments/assets/e8fd982f-8e71-4257-945b-c543cf9a905b" />
   
-
-![Map vs HashMap vs TreeMap 20만개 비교](<Map, TreeMap, HashMap 데이터 200000개 put, get에 따른 소요 시간 비교.png>)
+  
+<img width="416" height="510" alt="image" src="https://github.com/user-attachments/assets/47463dbf-3802-4855-b892-cc5a35b8295f" />
