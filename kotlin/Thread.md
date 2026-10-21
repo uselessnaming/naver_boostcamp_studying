@@ -120,7 +120,8 @@ while(state != State.TERMINATED) { lock.wait() }
 ## race condition
 별도의 조치 없이 여러 thread에서 하나의 공유 자원에 접근하려고 했을 경우 충돌 혹은 예상치 못한 동작이 이뤄질 수 있습니다.  
 
-![alt text](<race condition 발생 결과.png>)  
+<img width="310" height="250" alt="image" src="https://github.com/user-attachments/assets/9bc876fb-8fb9-42f5-be4c-8bc751adb47e" />  
+
 실제로 count를 공유 자원으로 마련하고 여러 thread에서 해당 count에 접근하도록 했을 때 예상 값은 500000인 것에 비해 실제 계산 값은 210284였음을 알 수 있습니다.  
 이를 방지하기 위해서는 접근하고자 하는 공유 자원 역시 lock을 통해 동기화해줘야 함을 알 수 있습니다.  
 
@@ -150,7 +151,7 @@ runnable1과 runnable2 중 어떤 것이 더 적합한 코드일까요?
 이 경우, runnable1이 성능적으로 더 우월합니다. runnable2가 세세한 조절이 가능하여 더 좋아보이지만 시간을 측정해보면 그렇지 않습니다.   
 synchronized()를 사용하게 되면 lock을 점유하고, 놓는 것에도 비용이 발생하게 됩니다. runnable1 같은 경우에는 해당 비용이 1번 발생하는 것이지만, runnable2 같은 경우 반복하며 100000번 비용이 발생하기 때문에 처리 속도에서 큰 차이가 발생하게 됩니다.  
 
-![alt text](image-1.png)  
+<img width="367" height="62" alt="image" src="https://github.com/user-attachments/assets/e6e9fcb8-636a-462c-969f-27b31f4ee52d" />    
 실제 실행 결과 10만번의 단순 연산이지만 큰 차이가 나는 것을 확인할 수 있습니다.  
 
 ### Q1 왜 Object에 notifyAll()과 wait() 코드가 포함되는가?
