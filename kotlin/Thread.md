@@ -1,6 +1,10 @@
 # Thread
 프로세스 내에서 실제로 작업을 수행하는 실행의 흐름 및 최소 작업 단위를 의미합니다. 하나의 프로세스는 최소 1개의 스레드를 가지고, 필요에 따라 여러 스레드를 생성해 여러 작업을 처리할 수 있습니다.  
 
+> 참고 자료  
+> [object](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html)  
+> [kotlin thread](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.concurrent/thread.html?utm_source=chatgpt.com)  
+
 ## 특징
 - Thread는 프로세스에 할당된 Heap, 데이터, 코드 영역 등의 메모리를 같은 프로세스 내의 Thread 끼리 공유합니다.  
 - 또한 각 Thread는 고유한 Stack과 레지스터를 따로 가려 각각의 함수 호출 및 실행 순서를 유지합니다.  
@@ -94,3 +98,33 @@ Executor를 사용하면 ThreadPool을 관리할 수 있습니다. 사용할 Thr
 ### join()
 `thread{ }.join()`을 하게 되면 현재 thread에서 해당 thread의 작업이 끝나고 종료할 때까지 대기하게 됩니다.  
 이 때 main thread는 blocking되고, blocking 되는 동안은 어떠한 작업도 할 수 없습니다.
+
+## My Thread 구현
+(MyThread 구현)[https://github.com/uselessnaming/cs-kotlin/blob/main/src/thread_coroutine/MyThread.kt]   
+
+Thread는 기본적으로 상태 값을 가지고 있으며, run, start, join 등에 따라 상태를 변경해줘야 합니다.  
+
+state는 lock으로 race-condition을 방지해줘야 합니다. 이 때 state는 main thread와 internal thread, 2개의 thread에서 접근이 가능하기 때문에 lock으로 관리되어야 합니다.
+
+synchronized() 함수를 사용하면 동시성 문제를 해결할 수 있습니다. lock의 `wait()`을 통해 대기하게 됩니다. 대기하다가 lock이 `nofityAll()`을 통해 변경이 있음을 알려줍니다. 해당 알림을 통해 `wait()` 이후 코드가 실행됩니다.
+
+```kotlin
+while(state != State.TERMINATED) { lock.wait() }
+```
+
+여기서 `if(state != State.TERMINATED)` 가 아닌 `while(state != State.TERMINATED)`를 사용하게 됩니다. 공식 문서를 살펴보면 허위 기상이라 하여 `nofity()`가 오지 않았음에도 thread가 기상할 수 있다고 합니다. 따라서 while을 통해 반복적으로 조건을 확인해줘야 합니다.
+
+### Q1 왜 Object에 notifyAll()과 wait() 코드가 포함되는가?
+synchronized()를 사용하면서 lock을 사용하게 됩니다. 여기서 대부분의 코드를 확인해보면 lock을 Object()로 선언합니다. 이 Object는 java에서 모든 class의 기반이 되는 class입니다.  
+`notifyAll()`과 `wait()` 모두 Object 클래스의 함수로, 이를 상속받는 하위 클래스들은 모두 사용할 수 있습니다.  
+> kotlin에서는 Any()가 최상위 클래스로 여기서는 `nofityAll()`, `await()`은 사용하지 못하도록 막아뒀습니다.
+
+다른 클래스들의 역할에 `notifyAll()`과 `wait()`이 필요 없는데, 왜 Object에 해당 코드가 들어있는 지 의문이 들었습니다. 
+
+Java의 최초 설계 당시에 모든 객체들은 synchronized()를 위한 내장 모니터를 가지게 설계되어있습니다. 이에 따라서 개발자들이 너무 많은 책임을 Object가 가진다고 비판했습니다.  
+
+이런 비판 속에서 이를 분리하여 `Lock`과 `Condition`이라는 별도의 타입으로 락 기능을 분리해서 관리할 수 있습니다. 물론 이미 `notifyAll()`, `wait()`을 너무 오래 사용해왔기 때문에 없애지는 못한 상황입니다.  
+
+> [lock과 관련된 참고 자료](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/package-summary.html)
+
+따라서 MyThread의 Lock을 `Object`에서 `Lock`과 `Condition`으로 교체해서 사용했습니다.
