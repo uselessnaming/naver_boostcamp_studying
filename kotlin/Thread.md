@@ -148,7 +148,10 @@ val runnable2 = Runnable {
 ```
 runnable1과 runnable2 중 어떤 것이 더 적합한 코드일까요?  
 이 경우, runnable1이 성능적으로 더 우월합니다. runnable2가 세세한 조절이 가능하여 더 좋아보이지만 시간을 측정해보면 그렇지 않습니다.   
-synchronized()를 사용하게 되면 lock을 점유하고, 놓는 것에도 비용이 발생하게 됩니다. runnable1 같은 경우에는 해당 비용이 1번 발생하는 것이지만, runnable2 같은 경우 반복하며 100000번 비용이 발생하기 때문에 처리 속도에서 큰 차이가 발생하게 됩니다.
+synchronized()를 사용하게 되면 lock을 점유하고, 놓는 것에도 비용이 발생하게 됩니다. runnable1 같은 경우에는 해당 비용이 1번 발생하는 것이지만, runnable2 같은 경우 반복하며 100000번 비용이 발생하기 때문에 처리 속도에서 큰 차이가 발생하게 됩니다.  
+
+![alt text](image-1.png)  
+실제 실행 결과 10만번의 단순 연산이지만 큰 차이가 나는 것을 확인할 수 있습니다.  
 
 ### Q1 왜 Object에 notifyAll()과 wait() 코드가 포함되는가?
 synchronized()를 사용하면서 lock을 사용하게 됩니다. 여기서 대부분의 코드를 확인해보면 lock을 Object()로 선언합니다. 이 Object는 java에서 모든 class의 기반이 되는 class입니다.  
