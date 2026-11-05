@@ -254,3 +254,8 @@
 
 + [build 생명 주기에 따른 hook]
 > build 과정에 따른 log를 찍거나 설정을 변경하는 등 올바른 시점에 사용할 수 있는 hook 설명
+
+## 11월 1주차
+### Algorithm
++ [MCMF 알고리즘](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/algorithm/MCMF.md)
+> 첫 지점에서 목적지까지 보내는 양(유량)을 최대로 하고, 그 양을 보내는 방법 중 최종 비용이 가장 적은 방법을 찾는 알고리즘
