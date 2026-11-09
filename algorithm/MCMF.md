@@ -1,8 +1,8 @@
 # MCMF (Min-Cost Max-Flow)
-![alt text](image.png)  
-> 알고리즘 도식화
-
 최소 비용 최대 유량 알고리즘이라고도 불립니다.  
+
+## 알고리 도식화
+<img width="795" height="672" alt="image" src="https://github.com/user-attachments/assets/ef19a223-0b9e-4cb1-8d16-08603cc2ca68" />  
 
 ## 목적
 첫 지점에서 목적지까지 보내는 양(유량)을 최대로 하고, 그 양을 보내는 방법 중 최종 비용이 가장 적은 방법을 찾는 알고리즘입니다.  
@@ -29,13 +29,13 @@ V는 노드의 개수, E는 간선 개수, F는 최종적으로 보내는 최대
 > 음수 간선이 존재할 때 : **O(V * E + F * E * Log V)**
 
 ## SPFA vs 다익스트라 + 포텐셜 소요 시간 비교
-![alt text](<spfa vs dijkstra 평균 소요 시간 차이 (node 5개).png>)  
+<img width="332" height="87" alt="image" src="https://github.com/user-attachments/assets/69e9fd61-2f13-4169-86dc-2f92d63ec598" />  
 > 정점 4개 (시간 단위 : us)  
 
-![alt text](<spfa vs dijkstra 평균 소요 시간 비교 (정점 802 개, 간선 160800 개).png>)  
+<img width="346" height="95" alt="image" src="https://github.com/user-attachments/assets/76a33704-19eb-4a02-a49a-db8506b6d39c" />  
 > 정점 802개 (시간 단위 : ms)  
 
-![alt text](<spfa vs dijkstra 평균 소요 시간 비교 (정점 1602 개, 간선 641600 개).png>)  
+<img width="360" height="92" alt="image" src="https://github.com/user-attachments/assets/1235e9b6-907e-4145-be13-e971b52f6c00" />  
 > 정점 1602개 (시간 단위 : ms)  
 
 그래프의 규모가 작을 때에는 두 방법의 소요 시간이 비슷하게 보입니다. 다만 그래프의 규모가 커짐에 따라 다익스트라 + 포텐셜 방법이 더 빠른 것을 확인할 수 있었습니다.  다만 어느 쪽이 빠른 지는 정점의 수 뿐만 아니라 그래프의 모양에 따라 달라질 수 있습니다.
