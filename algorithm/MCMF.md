@@ -1,4 +1,7 @@
 # MCMF (Min-Cost Max-Flow)
+![alt text](image.png)  
+> 알고리즘 도식화
+
 최소 비용 최대 유량 알고리즘이라고도 불립니다.  
 
 ## 목적
