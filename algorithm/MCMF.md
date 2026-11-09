@@ -31,4 +31,5 @@ V는 노드의 개수, E는 간선 개수, F는 최종적으로 보내는 최대
 ## 주의 사항
 처음 그래프에 음수 사이클이 존재한다면 이 방법을 그대로 사용할 수는 없습니다.  
 
-[**예제 코드**](https://github.com/uselessnaming/cs-kotlin/blob/main/src/algorithm/MCMF.kt)
+[**예제 코드(SPFA)**](https://github.com/uselessnaming/cs-kotlin/blob/main/src/algorithm/MCMFSpfa.kt)  
+[**예제 코드(Dijkstra)**](https://github.com/uselessnaming/cs-kotlin/blob/main/src/algorithm/MCMFDijkstra.kt)
