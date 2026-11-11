@@ -125,10 +125,24 @@ A2-1. 직접 `Job`을 직접 생성하는 경우, `CoroutineScope(context)` 팩�
 
 Q2-2. 그렇다면 `GlobalScope`에서 `Job`을 실행할만한 상황에는 어떤 것이 있을까요?
 
-A2-2. 일반 코드에서는 권장하지 않고, 라이브러리 혹은 저수준의 코드일 때 `Dispatchers.Unconfined`에서 도는 연산자일 경우가 있습니다. 혹은 애플리케이션 전체에서 도는 최상위 Coroutine의 경우에도 이를 허용하지만, 세밀한 검토를 통해 필요한 지 확인해야 하며 확인 후에도 `@OptIn`을 붙여서 확인했음을 의도적으로 표시하도록 합니다.
+A2-2. 일반 코드에서는 권장하지 않고, 라이브러리 혹은 저수준의 코드일 때 `Dispatchers.Unconfined`에서 도는 연산자일 경우가 있습니다. 혹은 애플리케이션 전체에서 도는 최상위 Coroutine의 경우에도 이를 허용하지만, 세밀한 검토를 통해 필요한 지 확인해야 하며 확인 후에도 `@OptIn`을 붙여서 확인했음을 의도적으로 표시하도록 합니다. 
 
 # Dispatcher
 Q1. Unconfined는 어떤 상황에서 쓰는 Dispatcher일가
 
+A1. Coroutine을 다른 Thread로 넘기는 dispatch 과정 없이 지금 바로 실행해야 하는 드문 경우에 사용하는 고급 도구이며, 일반 코드에서는 사용하지 않는 것을 권장하고 있습니다.  
+- CPU를 쓰지 않고, 특정 Thread에 묶인 공유 데이터도 건드리지 않는 Coroutine일 경우
+- 나중에 dispatch하는 것이 필요 없거나 원하지 않는 부작용을 낳는 코너 케이스 (어떤 작업을 즉시 해야 할 때)
+
+A1-1. dispatch 과정은 뭘까? Coroutine을 다른 Thread로 넘기는 과정이 왜 필요하지?
+
+Q1-1. Coroutine이 중단된 동안 resume을 일으키는 Thread와 이어서 실행되어야 할 Thread가 다를 수 있다. dispatch는 Coroutine의 실행 조각을 Dispatcher에 넘겨서, 그 Dispatcher가 정한 Thread에서 실행하도록 하는 단계
+
+Q1-2. Unconfined인 경우 문제가 되는 것은 dispatch 과정이 넘어가게 되는 것. 그래서 이게 뭐가 문제라는 거지?
+
+A1-2. dispatcher가 Unconfined가 아니라면 delay(1000) 호출 시, Coroutine이 중단되고 1초가 지나면 이를 dispatcher의 Thread로 전달하여 기존에 실행되던 Thread에서 Coroutine 작업이 진행된다. 하지만 Unconfined로 해둔다면 이런 dispatch 과정이 사라지기 때문에 기존에 어떤 Thread에서 작업을 했던 것과 다른 Thread로 보내질 수 있고, 그에 따라 추적이 어려워지기 때문에 권장하지 않는다고 할 수 있다.
+또한 만약 기존 작업에서 해당 Thread의 묶인 자원에 접근했다고 한다면, 이후 작업에서 다른 Thread로 보내지며 접근이 허용된 Thread가 아닌 Thread에서 실행될 수 있기 때문에 이렇게 사용하면 안된다.
+
 Q2. newSingleThreadContext 또한 어떻게 사용하는 지 예시 필요
 
+A2. 이름에서 보여지듯이 Thread 하나에 Coroutine을 가두는 Dispatcher를 생성하는 함수입니다. 
