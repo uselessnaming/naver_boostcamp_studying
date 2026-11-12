@@ -1,7 +1,7 @@
 # Dijkstra (다익스트라)
 
 ## 알고리즘 도식화
-![alt text](image.png)
+<img width="1640" height="1600" alt="image" src="https://github.com/user-attachments/assets/0f49ed7e-864a-4c1b-a78a-7a2a918dbc08" />
 
 ## 목적
 특정 지점에서 다른 지점까지의 최단 거리를 구하는 알고리즘입니다.  
