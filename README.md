@@ -260,3 +260,10 @@
 + [MCMF 알고리즘](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/algorithm/MCMF.md)
 > 첫 지점에서 목적지까지 보내는 양(유량)을 최대로 하고, 그 양을 보내는 방법 중 최종 비용이 가장 적은 방법을 찾는 알고리즘
 > SPFA 와 Dijkstra + 포텐셜의 차이 확인
+
+## 11월 2주차
+### Algorithm
++ [Dijkstra 알고리즘](https://github.com/uselessnaming/naver_boostcamp_studying/blob/main/algorithm/Dijkstra.md)
+> 한 지점에서 다른 지점까지의 최단 거리를 구하는 알고리즘
+> 음수 간선에서는 사용 불가
+> 우선 순위 큐
