@@ -2,7 +2,7 @@
 서로소 집합 알고리즘이라고도 불립니다.
 
 ## 알고리즘 도식화
-![alt text](image.png)
+<img width="1800" height="1620" alt="image" src="https://github.com/user-attachments/assets/d5785f57-df07-4d97-a3b1-cc3f031bc83d" />  
 
 ## 목적
 여러 개의 노드가 존재할 때, 두 노드를 선택해서 같은 집합에 속하는지 판별하는 알고리즘입니다.
